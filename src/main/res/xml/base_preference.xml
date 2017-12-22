@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="SMS Over XMPP">
+        <org.openintents.xmpp.util.XmppAppPreference
+            android:key="xmpp_provider_list"
+            android:title="Select XMPP app!" />
+        <org.openintents.xmpp.util.XmppAccountPreference
+            android:key="xmpp_account"
+            android:title="Select account!" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

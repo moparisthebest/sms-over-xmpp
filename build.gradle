@@ -1,0 +1,42 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.0'
+    }
+}
+
+apply plugin: 'com.android.application'
+
+repositories {
+    jcenter()
+    mavenLocal()
+    mavenCentral()
+    maven {
+        url 'https://maven.google.com'
+    }
+}
+
+dependencies {
+    compile 'com.android.support:support-v4:23.3.0'
+    compile 'com.moparisthebest:xmpp-api:1.0-SNAPSHOT'
+}
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '25.0.0'
+
+    defaultConfig {
+        minSdkVersion 12
+        targetSdkVersion 22
+        applicationId 'com.moparisthebest.sms2xmpp'
+        versionCode 1
+        versionName '1.0'
+    }
+
+    // Do not abort build if lint finds errors
+    lintOptions {
+        abortOnError false
+    }
+}
